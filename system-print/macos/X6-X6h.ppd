@@ -1,0 +1,74 @@
+*PPD-Adobe: "4.3"
+*FormatVersion: "4.3"
+*FileVersion: "1.0"
+*LanguageVersion: English
+*LanguageEncoding: ISOLatin1
+*PCFileName: "TINYX6H.PPD"
+*Manufacturer: "X6"
+*Product: "(X6/X6h)"
+*ModelName: "X6/X6h"
+*ShortNickName: "X6/X6h"
+*NickName: "X6/X6h"
+*PSVersion: "(3010.000) 0"
+*LanguageLevel: "3"
+*ColorDevice: False
+*DefaultColorSpace: Gray
+*FileSystem: False
+*Throughput: "1"
+*LandscapeOrientation: Plus90
+*TTRasterizer: Type42
+*cupsVersion: 2.0
+*cupsManualCopies: True
+*cupsFilter: "application/vnd.cups-pdf 0 -"
+*OpenUI *PageSize/Paper Size: PickOne
+*OrderDependency: 10 AnySetup *PageSize
+*DefaultPageSize: Roll
+*PageSize Roll/56.2 mm Roll - Automatic Length: "<</PageSize[159.307 566.929]>>setpagedevice"
+*CloseUI: *PageSize
+*OpenUI *PageRegion: PickOne
+*OrderDependency: 10 AnySetup *PageRegion
+*DefaultPageRegion: Roll
+*PageRegion Roll/56.2 mm Roll - Automatic Length: "<</PageSize[159.307 566.929]>>setpagedevice"
+*CloseUI: *PageRegion
+*DefaultImageableArea: Roll
+*ImageableArea Roll: "10.534 0 148.773 566.929"
+*DefaultPaperDimension: Roll
+*PaperDimension Roll: "159.307 566.929"
+*VariablePaperSize: True
+*MaxMediaWidth: "159.307"
+*MaxMediaHeight: "5669.291"
+*HWMargins: 10.534 0 10.534 0
+*CustomPageSize True: "pop pop pop <</PageSize[5 -2 roll]/ImagingBBox null>>setpagedevice"
+*ParamCustomPageSize Width: 1 points 159.307 159.307
+*ParamCustomPageSize Height: 2 points 28.346 5669.291
+*ParamCustomPageSize WidthOffset: 3 points 0 0
+*ParamCustomPageSize HeightOffset: 4 points 0 0
+*ParamCustomPageSize Orientation: 5 int 0 3
+*DefaultResolution: 200dpi
+*OpenGroup: X6/X6
+*OpenUI *X6Mode/Print Mode: PickOne
+*OrderDependency: 20 AnySetup *X6Mode
+*DefaultX6Mode: Photo
+*X6Mode Photo/Photo - Halftones: ""
+*X6Mode Text/Text - Automatic Threshold: ""
+*X6Mode Binary/Black and White: ""
+*CloseUI: *X6Mode
+*OpenUI *X6Density/Print Density: PickOne
+*OrderDependency: 20 AnySetup *X6Density
+*DefaultX6Density: Dark
+*X6Density Light/Light: ""
+*X6Density Normal/Normal: ""
+*X6Density Dark/Dark: ""
+*CloseUI: *X6Density
+*OpenUI *X6Contrast/Image Contrast: PickOne
+*OrderDependency: 20 AnySetup *X6Contrast
+*DefaultX6Contrast: C115
+*X6Contrast C080/0.8: ""
+*X6Contrast C100/1.0: ""
+*X6Contrast C115/1.15: ""
+*X6Contrast C130/1.3: ""
+*X6Contrast C150/1.5: ""
+*CloseUI: *X6Contrast
+*CloseGroup: X6
+*DefaultFont: Courier
+*Font Courier: Standard "(001.007)" Standard ROM

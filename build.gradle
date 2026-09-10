@@ -1,0 +1,30 @@
+allprojects {
+    group = 'dev.sbelx.x6driver'
+    version = '1.1.0'
+    repositories { mavenCentral() }
+}
+subprojects {
+    apply plugin: 'java-library'
+    java { sourceCompatibility = JavaVersion.VERSION_21; targetCompatibility = JavaVersion.VERSION_21 }
+    tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8'; options.release = 21 }
+    dependencies {
+        testImplementation 'org.junit.jupiter:junit-jupiter:5.10.3'
+        testRuntimeOnly 'org.junit.platform:junit-platform-launcher:1.10.3'
+    }
+    test { useJUnitPlatform(); systemProperty 'java.awt.headless', 'true' }
+    dependencyLocking { lockAllConfigurations() }
+}
+project(':core') {
+    dependencies { api 'com.google.code.gson:gson:2.11.0'; implementation 'org.xerial:sqlite-jdbc:3.46.1.0'; runtimeOnly 'org.slf4j:slf4j-nop:2.0.13' }
+}
+project(':imaging') {
+    dependencies { api project(':core'); api 'org.apache.pdfbox:pdfbox:3.0.3'; implementation 'com.google.zxing:core:3.5.3' }
+}
+project(':protocol') { dependencies { api project(':imaging') } }
+project(':transport') { dependencies { api project(':protocol') } }
+project(':transport-macos') { dependencies { api project(':transport') } }
+project(':print-service') {
+    apply plugin: 'application'
+    dependencies { api project(':transport-macos') }
+    application { mainClass = 'dev.sbelx.x6driver.service.ServiceMain' }
+}
